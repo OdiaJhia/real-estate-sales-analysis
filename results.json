@@ -1,0 +1,260 @@
+{
+  "raw_rows": 5025,
+  "duplicates_removed": 25,
+  "missing_before": {
+    "age": 90,
+    "first_response_hours": 140
+  },
+  "case_fixes_source": 60,
+  "case_fixes_city": 45,
+  "response_outliers_fixed": 12,
+  "clean_rows": 5000,
+  "leads": 5000,
+  "bookings": 536,
+  "conversion_rate": 10.72,
+  "revenue_cr": 703.9,
+  "avg_deal_lakh": 131.3,
+  "avg_discount_pct": 3.53,
+  "avg_days_to_close": 35.6,
+  "best_month": "Sep 2025",
+  "best_month_rev_cr": 42.7,
+  "revenue_by_year_cr": {
+    "2024": 341.7,
+    "2025": 316.3,
+    "2026": 45.9
+  },
+  "city_table": {
+    "Mumbai": {
+      "revenue_cr": 247.9,
+      "deals": 112,
+      "avg_psf": 15934
+    },
+    "Bengaluru": {
+      "revenue_cr": 131.7,
+      "deals": 107,
+      "avg_psf": 8455
+    },
+    "Pune": {
+      "revenue_cr": 129.7,
+      "deals": 132,
+      "avg_psf": 7176
+    },
+    "Delhi NCR": {
+      "revenue_cr": 127.8,
+      "deals": 122,
+      "avg_psf": 7815
+    },
+    "Hyderabad": {
+      "revenue_cr": 66.7,
+      "deals": 63,
+      "avg_psf": 7560
+    }
+  },
+  "ptype_table": {
+    "3BHK": {
+      "revenue_cr": 230.3,
+      "deals": 146
+    },
+    "2BHK": {
+      "revenue_cr": 209.6,
+      "deals": 203
+    },
+    "Villa": {
+      "revenue_cr": 136.7,
+      "deals": 43
+    },
+    "Plot": {
+      "revenue_cr": 86.5,
+      "deals": 74
+    },
+    "1BHK": {
+      "revenue_cr": 40.8,
+      "deals": 70
+    }
+  },
+  "funnel": {
+    "Inquiry": 5000,
+    "Site Visit": 1432,
+    "Negotiation": 904,
+    "Booking": 536
+  },
+  "stage_conv": {
+    "Inquiry\u2192Site Visit": 28.6,
+    "Site Visit\u2192Negotiation": 63.1,
+    "Negotiation\u2192Booking": 59.3
+  },
+  "source_table": {
+    "Walk-in": {
+      "leads": 382,
+      "conv": 20.16,
+      "cost_per_booking": 0
+    },
+    "Referral": {
+      "leads": 612,
+      "conv": 18.14,
+      "cost_per_booking": 6600
+    },
+    "Channel Partner": {
+      "leads": 573,
+      "conv": 10.99,
+      "cost_per_booking": 81900
+    },
+    "Website": {
+      "leads": 884,
+      "conv": 9.62,
+      "cost_per_booking": 18700
+    },
+    "Property Portal": {
+      "leads": 1399,
+      "conv": 9.01,
+      "cost_per_booking": 38900
+    },
+    "Social Media": {
+      "leads": 1150,
+      "conv": 6.43,
+      "cost_per_booking": 40400
+    }
+  },
+  "response_table": {
+    "<1h": 18.75,
+    "1-4h": 14.69,
+    "4-12h": 10.87,
+    "12-24h": 6.14,
+    ">24h": 3.9
+  },
+  "budget_table": {
+    "<85%": 4.06,
+    "85-95%": 7.27,
+    "95-105%": 12.2,
+    "105-120%": 14.65,
+    ">120%": 23.55
+  },
+  "followup_table": {
+    "0-1": 7.52,
+    "2-3": 9.47,
+    "4-5": 13.06,
+    "6+": 14.69
+  },
+  "loan_table": {
+    "No": 8.4,
+    "Yes": 15.18
+  },
+  "buyer_table": {
+    "End-user": 10.75,
+    "Investor": 10.64
+  },
+  "city_conv": {
+    "Pune": 15.07,
+    "Mumbai": 10.42,
+    "Delhi NCR": 10.09,
+    "Bengaluru": 9.67,
+    "Hyderabad": 8.58
+  },
+  "agent_top3": [
+    {
+      "agent": "Agent 19",
+      "conv": 19.07,
+      "revenue_cr": 46.7
+    },
+    {
+      "agent": "Agent 14",
+      "conv": 18.8,
+      "revenue_cr": 42.1
+    },
+    {
+      "agent": "Agent 04",
+      "conv": 17.74,
+      "revenue_cr": 46.8
+    }
+  ],
+  "agent_bottom3": [
+    {
+      "agent": "Agent 16",
+      "conv": 4.38,
+      "revenue_cr": 10.6
+    },
+    {
+      "agent": "Agent 06",
+      "conv": 2.92,
+      "revenue_cr": 9.4
+    },
+    {
+      "agent": "Agent 05",
+      "conv": 1.55,
+      "revenue_cr": 3.2
+    }
+  ],
+  "agent_conv_range": [
+    1.55,
+    19.07
+  ],
+  "corr_resp_conv_agent": -0.88,
+  "corr_discount_days": 0.01,
+  "payment_mix": {
+    "Home Loan": 52.2,
+    "Self-funded": 24.1,
+    "Mixed": 23.7
+  },
+  "chi2_response": {
+    "fast_rate": 14.96,
+    "slow_rate": 3.9,
+    "chi2": 30.6,
+    "p_value": 3.16e-08
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "auc": 0.749,
+      "accuracy": 0.695,
+      "precision": 0.209,
+      "recall": 0.664,
+      "f1": 0.318
+    },
+    {
+      "model": "Random Forest",
+      "auc": 0.734,
+      "accuracy": 0.853,
+      "precision": 0.313,
+      "recall": 0.313,
+      "f1": 0.313
+    }
+  ],
+  "importance": {
+    "Budget vs price": 0.0968,
+    "Lead source": 0.044,
+    "Response time": 0.04,
+    "Loan pre-approved": 0.0295,
+    "No. of follow-ups": 0.0156,
+    "City": 0.0117,
+    "Area (sq ft)": 0.0025,
+    "List price": 0.0017,
+    "Property type": 0.0009,
+    "Buyer age": 0.0003,
+    "Buyer type": -0.0001
+  },
+  "odds_top": {
+    "loan_preapproved_Yes": 2.21,
+    "budget_ratio": 2.2,
+    "city_Pune": 1.86,
+    "lead_source_Referral": 1.85,
+    "property_type_Villa": 1.78
+  },
+  "odds_bottom": {
+    "lead_source_Website": 0.77,
+    "area_sqft": 0.74,
+    "first_response_hours": 0.65,
+    "lead_source_Property Portal": 0.61,
+    "lead_source_Social Media": 0.43
+  },
+  "season_best_month": 8,
+  "season_peak_leads_month": 11,
+  "environment": {
+    "python": "3.13.18",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  }
+}
