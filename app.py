@@ -2,7 +2,6 @@ from pathlib import Path
 import json
 import textwrap
 
-import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
