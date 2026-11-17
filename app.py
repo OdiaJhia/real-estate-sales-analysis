@@ -128,15 +128,17 @@ with left:
     st.markdown("<div class='section-kicker'>PORTFOLIO SNAPSHOT</div>", unsafe_allow_html=True)
     st.markdown("<div class='section-title'>Your performance at a glance</div>", unsafe_allow_html=True)
 with right:
-    st.markdown(f"<div style='text-align:right;padding-top:18px;color:{MUTED};font-size:.8rem'>Selected period<br><b style='color:{INK}'>{d1:%d %b %Y} — {d2:%d %b %Y}</b></div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:right;padding-top:18px;color:{MUTED};font-size:.8rem'>Selected period<br><b style='color:{INK}'>{d1:%d %b %Y} — {d2:%d %b %Y}</b></div>", 
 
-m1, m2, m3, m4, m5 = st.columns(5)
-m1.metric("Total leads", f"{n:,}")
-m2.metric("Bookings", f"{bookings:,}")
-m3.metric("Conversion rate", f"{conv:.1f}%")
-m4.metric("Sales revenue", f"₹{rev/1e7:,.0f} Cr")
-m5.metric("Average deal", f"₹{avg_deal:,.0f} L")
+                # KPI cards — spacious two-row layout
+row1 = st.columns(3)
+row1[0].metric("Total leads", f"{n:,}")
+row1[1].metric("Bookings", f"{bookings:,}")
+row1[2].metric("Conversion rate", f"{conv:.2f}%")
 
+row2 = st.columns(2)
+row2[0].metric("Sales revenue", f"₹{rev/1e7:,.1f} Cr")
+row2[1].metric("Average deal", f"₹{avg_deal:,.1f} L")
 st.markdown("<div class='note'>Academic demonstration using a simulated CRM dataset. The results illustrate the analytical workflow and must not be interpreted as actual real-estate market statistics.</div>", unsafe_allow_html=True)
 st.write("")
 
