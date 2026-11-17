@@ -124,13 +124,25 @@ st.markdown(
 )
 
 left, right = st.columns([3, 1])
-with left:
-    st.markdown("<div class='section-kicker'>PORTFOLIO SNAPSHOT</div>", unsafe_allow_html=True)
-    st.markdown("<div class='section-title'>Your performance at a glance</div>", unsafe_allow_html=True)
-with right:
-    st.markdown(f"<div style='text-align:right;padding-top:18px;color:{MUTED};font-size:.8rem'>Selected period<br><b style='color:{INK}'>{d1:%d %b %Y} — {d2:%d %b %Y}</b></div>", 
 
-                # KPI cards — spacious two-row layout
+with left:
+    st.markdown(
+        "<div class='section-kicker'>PORTFOLIO SNAPSHOT</div>",
+        unsafe_allow_html=True
+    )
+    st.markdown(
+        "<div class='section-title'>Your performance at a glance</div>",
+        unsafe_allow_html=True
+    )
+
+with right:
+    st.markdown(
+        f"<div style='text-align:right;padding-top:18px;color:{MUTED};font-size:.8rem'>"
+        f"Selected period<br><b style='color:{INK}'>{d1:%d %b %Y} — {d2:%d %b %Y}</b></div>",
+        unsafe_allow_html=True
+    )
+
+# KPI cards — spacious two-row layout
 row1 = st.columns(3)
 row1[0].metric("Total leads", f"{n:,}")
 row1[1].metric("Bookings", f"{bookings:,}")
