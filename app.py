@@ -133,9 +133,9 @@ with right:
 m1, m2, m3, m4, m5 = st.columns(5)
 m1.metric("Total leads", f"{n:,}")
 m2.metric("Bookings", f"{bookings:,}")
-m3.metric("Conversion rate", f"{conv:.2f}%")
-m4.metric("Sales revenue", f"₹{rev/1e7:,.1f} Cr")
-m5.metric("Average deal", f"₹{avg_deal:,.1f} L")
+m3.metric("Conversion rate", f"{conv:.1f}%")
+m4.metric("Sales revenue", f"₹{rev/1e7:,.0f} Cr")
+m5.metric("Average deal", f"₹{avg_deal:,.0f} L")
 
 st.markdown("<div class='note'>Academic demonstration using a simulated CRM dataset. The results illustrate the analytical workflow and must not be interpreted as actual real-estate market statistics.</div>", unsafe_allow_html=True)
 st.write("")
@@ -153,7 +153,7 @@ def aesthetic_bar(series, title, ylabel="", percent=False, horizontal=False):
             bars = ax.barh(labels[::-1], values[::-1], color="#A56BFF", height=.58)
             ax.invert_yaxis()
             for bar, value in zip(bars, values[::-1]):
-                label = f"{value:.1f}%" if percent else (f"₹{value:,.1f} Cr" if "revenue" in title.lower() else f"{value:,.0f}")
+                label = f"{value:.1f}%" if percent else (f"₹{value:,.1f} Cr" if "revenue" in title.lower() else (f"{value:.3f}" if "relative importance" in ylabel.lower() else f"{value:,.0f}"))
                 ax.text(bar.get_width(), bar.get_y()+bar.get_height()/2, f"  {label}", va="center", color=INK, fontsize=8)
         else:
             bars = ax.bar(labels, values, color="#A56BFF", width=.62)
